@@ -1,6 +1,10 @@
 @use 'variaveis';
 @use 'header';
 @use 'hero';
+@use 'plans';
+@use 'shows';
+@use 'avaliable-devices';
+@use 'footer';
 
 @font-face {
     font-family: Avenir;
@@ -26,22 +30,22 @@ body {
     background-color: variaveis.$corDeFundo;
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
 
-@mixin title($fontSize: 40px) {
+@mixin title($fontSize: 42px) {
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
 }
 
 .text--big {
-    @include text(18px);
+    @include text(20px);
 
     @media (max-width: 768px) {
-        @include text(15px);
+        @include text(17px);
     }
 }
 
@@ -49,26 +53,26 @@ body {
     @include text;
 
     @media (max-width: 768px) {
-        @include text(14px);
+        @include text(16px);
     }
 }
 
 .text--small {
-    @include text(12px);
+    @include text(14px);
 
     @media (max-width: 768px) {
-        @include text(11px);
+        @include text(13px);
     }
 }
 
 .link-text {
-    @include text(18px);
+    @include text(20px);
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
 }
 
 .title--big {
-    @include title(44px);
+    @include title(46px);
 
     @media (max-width: 768px) {
         @include title(26px);
@@ -79,15 +83,15 @@ body {
     @include title;
 
     @media (max-width: 768px) {
-        @include title(24px);
+        @include title(26px);
     }
 }
 
 .title--small {
-    @include title(28px);
+    @include title(30px);
 
     @media (max-width: 768px) {
-        @include title(22px);
+        @include title(24px);
     }
 }
 

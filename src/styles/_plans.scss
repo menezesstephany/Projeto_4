@@ -1,0 +1,60 @@
+.plans {
+    margin-top: 50px;
+    padding: 2.5vw;
+    padding: 0 20px 100px 20px;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (max-width: 768px) {
+            margin-top: 20px;
+        }
+    }
+
+    .button {
+        width: auto;
+        height: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
+
+.plans-grid {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 350px 400px; 
+    gap: 100px;
+}
+.plans-grid--expanded {
+    height: auto;
+}
+
+.plans__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.plans__list__item {
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.plans__list img {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+}
+
